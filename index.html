@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cozy Box | Gift Hampers &amp; Perfumes</title>
+<meta name="description" content="Gift hampers from R130 and perfumes. Packed with love, just for you. Order on WhatsApp.">
+<style>
+:root{--ink:#111;--muted:#777;--line:#eee;--accent:#7b3fa0;--pink:#f7d6e0;--red:#e5334f;--bg:#fff}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:var(--bg);padding-bottom:70px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.demo{background:#000;color:#fff;text-align:center;font-size:11px;padding:4px;letter-spacing:1px}
+.promo{background:var(--accent);color:#fff;text-align:center;font-size:13px;padding:8px 10px}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:10px 14px}
+.brand{font-size:22px;font-weight:800;letter-spacing:-.5px}
+.brand span{color:var(--accent)}
+.cartbtn{position:relative;background:none;border:0;font-size:24px}
+.badge{position:absolute;top:-6px;right:-8px;background:var(--red);color:#fff;font-size:11px;font-weight:700;border-radius:10px;min-width:18px;height:18px;line-height:18px;text-align:center;padding:0 4px}
+.search{padding:0 14px 10px}
+.search input{width:100%;padding:11px 14px;border-radius:24px;border:1px solid #ddd;font-size:15px;background:#f6f6f6}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:0 14px 10px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;padding:8px 16px;border-radius:20px;border:1px solid #ddd;background:#fff;font-size:14px;white-space:nowrap}
+.chip.on{background:#000;color:#fff;border-color:#000}
+.banner{margin:12px 14px;border-radius:14px;padding:26px 20px;background:linear-gradient(135deg,#f7d6e0,#e4c9f2);text-align:left}
+.banner small{letter-spacing:2px;font-size:11px;color:var(--accent);font-weight:700}
+.banner h1{font-size:26px;line-height:1.15;margin:6px 0 8px}
+.banner p{font-size:14px;color:#444;margin-bottom:14px}
+.cta{display:inline-block;background:#000;color:#fff;padding:11px 22px;border-radius:24px;font-size:14px;font-weight:700;border:0}
+.perks{display:flex;gap:8px;overflow-x:auto;padding:0 14px 6px;scrollbar-width:none}
+.perk{flex:0 0 auto;font-size:12px;background:#f6f6f6;border-radius:8px;padding:8px 12px}
+h2.sec{font-size:18px;padding:18px 14px 10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:0 10px}
+.card{background:#fff;border-radius:6px;overflow:hidden;position:relative}
+.card .ph{aspect-ratio:3/4;background:#f3f3f3;overflow:hidden;position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer}
+.tag{position:absolute;left:6px;top:6px;background:#000;color:#fff;font-size:10px;padding:3px 7px;border-radius:3px;letter-spacing:.5px}
+.info{padding:8px 4px 12px}
+.name{font-size:13px;line-height:1.3;min-height:34px}
+.items{font-size:11px;color:var(--muted);margin-top:2px;min-height:28px}
+.price{font-size:18px;font-weight:800;color:var(--red);margin-top:6px}
+.price.ask{font-size:14px;color:var(--muted);font-weight:600}
+.add{margin-top:8px;width:100%;padding:9px;border-radius:20px;border:1px solid #000;background:#fff;font-size:13px;font-weight:700}
+.add.dark{background:#000;color:#fff}
+.add.wa{border-color:#1faa59;color:#1faa59}
+@media(min-width:700px){.grid{grid-template-columns:repeat(4,1fr);max-width:1100px;margin:auto}h2.sec,.banner,.perks,.chips,.search{max-width:1100px;margin-left:auto;margin-right:auto}}
+.hamperinfo{margin:26px 14px 0;background:#faf6fc;border-radius:14px;padding:18px;text-align:center}
+.hamperinfo img{max-width:360px;width:100%;border-radius:12px;margin-top:12px}
+.req{margin:26px 14px 0;border:1px solid var(--line);border-radius:14px;padding:20px;max-width:560px}
+@media(min-width:700px){.req,.hamperinfo{margin-left:auto;margin-right:auto;max-width:560px}}
+.req h3{font-size:18px;margin-bottom:6px}
+.req p{font-size:14px;color:#555;margin-bottom:12px}
+.req input,.req textarea{width:100%;padding:11px 12px;border:1px solid #ddd;border-radius:10px;font-size:15px;font-family:inherit;margin-bottom:10px}
+.req textarea{min-height:90px;resize:vertical}
+.wabtn{display:block;width:100%;text-align:center;background:#1faa59;color:#fff;padding:13px;border-radius:26px;font-weight:700;font-size:15px;border:0}
+.contact{text-align:center;padding:26px 14px;font-size:14px;color:#444}
+.contact b{display:block;font-size:18px;color:#000;margin:4px 0 10px}
+.contact .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.contact .row a{padding:11px 22px;border-radius:24px;border:1px solid #000;font-weight:700;font-size:14px}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:0 14px 20px}
+#bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid var(--line);padding:10px 14px;align-items:center;justify-content:space-between;gap:10px}
+#bar .t{font-size:14px}#bar .t b{color:var(--red);font-size:17px}
+#bar button{background:#000;color:#fff;border:0;border-radius:24px;padding:12px 22px;font-weight:700;font-size:14px}
+#fab{position:fixed;right:14px;bottom:78px;z-index:25;width:54px;height:54px;border-radius:50%;background:#1faa59;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+#sheet{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.5);display:none;align-items:flex-end}
+#sheet .box{background:#fff;width:100%;max-height:85vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px 16px 22px;max-width:560px;margin:0 auto}
+#sheet h3{display:flex;justify-content:space-between;align-items:center;font-size:18px;margin-bottom:10px}
+#sheet h3 button{background:none;border:0;font-size:24px}
+.line{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.line img{width:56px;height:56px;object-fit:cover;border-radius:6px}
+.line .d{flex:1;font-size:13px}
+.line .d b{display:block;color:var(--red);font-size:14px;margin-top:2px}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid #ccc;background:#fff;font-size:16px}
+.total{display:flex;justify-content:space-between;font-size:17px;font-weight:800;padding:14px 0}
+.empty{text-align:center;color:var(--muted);padding:30px 0}
+.small{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:60;align-items:center;justify-content:center;padding:10px}
+#lb img{max-width:100%;max-height:100%;border-radius:8px}
+.none{display:none;text-align:center;color:var(--muted);padding:30px 14px}
+</style>
+</head>
+<body>
+<div class="demo">DEMO WEBSITE</div>
+<div class="promo">Packed with love, just for you &#128156; &middot; Hampers from R130</div>
+
+<header>
+  <div class="top">
+    <div class="brand">The Cozy <span>Box</span></div>
+    <button class="cartbtn" onclick="openCart()" aria-label="Open cart">&#128717;<span class="badge" id="badge">0</span></button>
+  </div>
+  <div class="search"><input id="q" type="search" placeholder="Search hampers and perfumes" oninput="render()"></div>
+  <div class="chips" id="chips">
+    <button class="chip on" data-c="all">All</button>
+    <button class="chip" data-c="hamper">Gift Hampers</button>
+    <button class="chip" data-c="duo">Perfume Duos</button>
+    <button class="chip" data-c="perfume">100ml Perfumes</button>
+  </div>
+</header>
+
+<div class="banner">
+  <small>THE COZY BOX HAMPERS</small>
+  <h1>Gifts they will love, from R130</h1>
+  <p>Perfumes, hand lotion, lipgloss and more, packed with love.</p>
+  <a class="cta" href="#shop">Shop now</a>
+</div>
+<div class="perks">
+  <div class="perk">&#127873; Gift-ready packaging</div>
+  <div class="perk">&#128172; Order on WhatsApp</div>
+  <div class="perk">&#10024; Not listed? Just ask us</div>
+</div>
+
+<h2 class="sec" id="shop">Shop</h2>
+<div class="grid" id="grid"></div>
+<div class="none" id="none">No items found. Message us on WhatsApp and we will help you find it.</div>
+
+<div class="hamperinfo">
+  <b style="font-size:17px">Hamper price list</b>
+  <p style="font-size:13px;color:#555;margin-top:4px">Hamper 1 R250 &middot; Hamper 2 R200 &middot; Hamper 3 R130</p>
+  <img src="flyer.jpg" alt="The Cozy Box hampers price list" onclick="openLb(this)">
+</div>
+
+<div class="req">
+  <h3>Can't find what you're looking for?</h3>
+  <p>We have more items than shown here. Tell us what you want and we will get back to you.</p>
+  <input id="rname" placeholder="Your name (optional)">
+  <textarea id="rtext" placeholder="e.g. a perfume, a hamper for a birthday, my budget..."></textarea>
+  <a class="wabtn" href="#" onclick="sendRequest();return false">Send request on WhatsApp</a>
+</div>
+
+<div class="contact">
+  Order or ask a question
+  <b>069 140 0100</b>
+  <div class="row">
+    <a href="https://wa.me/27691400100?text=Hi%20The%20Cozy%20Box%2C%20I%20need%20help%20with%20an%20order." target="_blank" rel="noopener">WhatsApp</a>
+    <a href="tel:+27691400100">Call</a>
+  </div>
+</div>
+<footer>&copy; The Cozy Box &middot; Demo website</footer>
+
+<a id="fab" href="https://wa.me/27691400100?text=Hi%20The%20Cozy%20Box%2C%20I%20would%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" aria-label="WhatsApp">&#128172;</a>
+
+<div id="bar"><div class="t"><span id="bn">0 items</span> &middot; <b id="bt">R0</b></div><button onclick="openCart()">View cart</button></div>
+
+<div id="sheet" onclick="if(event.target===this)closeCart()">
+  <div class="box">
+    <h3>Your cart <button onclick="closeCart()" aria-label="Close">&times;</button></h3>
+    <div id="lines"></div>
+    <div class="total"><span>Total</span><span id="tot">R0</span></div>
+    <a class="wabtn" href="#" onclick="checkout();return false">Send order on WhatsApp</a>
+    <button class="add" style="margin-top:10px" onclick="clearCart()">Clear cart</button>
+    <p class="small">No online payment. We confirm your order, delivery and payment on WhatsApp.</p>
+  </div>
+</div>
+
+<div id="lb" onclick="this.style.display='none'"><img id="lbimg" alt=""></div>
+
+<script>
+var WA='27691400100';
+var P=[
+ {id:'h1',c:'hamper',tag:'HAMPER 1',n:'Hamper 1: 1 litre tumbler, perfumes, lotion and lipgloss',it:'1L tumbler, 50ml perfume, 35ml perfume, hand lotion, lipgloss, mini wipes, mirror',p:250,img:'h1-tumbler.jpg'},
+ {id:'h2a',c:'hamper',tag:'HAMPER 2',n:'Hamper 2: Berries Weekend set',it:'50ml perfume, 35ml perfume, hand lotion, lipgloss, mini wipes, mirror',p:200,img:'h2-berries.jpg'},
+ {id:'h2b',c:'hamper',tag:'HAMPER 2',n:'Hamper 2: Ophylia set',it:'50ml perfume, 35ml perfume, hand lotion, lipgloss, mini wipes, mirror',p:200,img:'h2-ophylia.jpg'},
+ {id:'h2c',c:'hamper',tag:'HAMPER 2',n:'Hamper 2: Yara pink set',it:'50ml perfume, 35ml perfume, hand lotion, lipgloss, mini wipes, mirror',p:200,img:'h2-yara.jpg'},
+ {id:'h2d',c:'hamper',tag:'HAMPER 2',n:'Hamper 2: Mousuf Wardi and Sabaya set',it:'50ml perfume, 35ml perfume, hand lotion, lipgloss, mini wipes, mirror',p:200,img:'h2-wardi.jpg'},
+ {id:'h2e',c:'hamper',tag:'HAMPER 2',n:'Hamper 2: Milya set',it:'50ml perfume, 35ml perfume, hand lotion, lipgloss, mini wipes, mirror',p:200,img:'h2-milya.jpg'},
+ {id:'h3a',c:'duo',tag:'HAMPER 3',n:'Perfume duo: Heibah 50ml and Musamam 35ml',it:'50ml perfume + 35ml perfume',p:130,img:'h3-heibah.jpg'},
+ {id:'h3b',c:'duo',tag:'HAMPER 3',n:'Perfume duo: Hayaati Beau 50ml and Asad 35ml',it:'50ml perfume + 35ml perfume',p:130,img:'h3-hayaati.jpg'},
+ {id:'h3c',c:'duo',tag:'HAMPER 3',n:'Perfume duo: Mousuf Wardi 50ml and Sabaya 35ml',it:'50ml perfume + 35ml perfume',p:130,img:'h3-wardi.jpg'},
+ {id:'h3d',c:'duo',tag:'HAMPER 3',n:'Perfume duo: Scandant Homme and Musamam',it:'50ml perfume + 35ml perfume',p:130,img:'h3-scandant.jpg'},
+ {id:'p1',c:'perfume',tag:'100ML',n:'Black Asad Eau de Parfum 100ml',it:'Comes in a branded pouch',p:0,img:'p-blackasad.jpg'},
+ {id:'p2',c:'perfume',tag:'100ML',n:'Ameerat Al Arab Eau de Parfum 100ml',it:'Comes in a branded pouch',p:0,img:'p-ameerat.jpg'},
+ {id:'p3',c:'perfume',tag:'100ML',n:'Mousuf Wardi Eau de Parfum 100ml',it:'Comes in a branded pouch',p:0,img:'p-mousuf.jpg'},
+ {id:'p4',c:'perfume',tag:'100ML',n:'Berrys Weekend Pink Edition 100ml',it:'Comes in a branded pouch',p:0,img:'p-berrys.jpg'}
+];
+var cat='all',cart={};
+try{cart=JSON.parse(localStorage.getItem('cozycart')||'{}')}catch(e){cart={}}
+function save(){try{localStorage.setItem('cozycart',JSON.stringify(cart))}catch(e){}}
+function R(n){return 'R'+n}
+function find(id){return P.filter(function(x){return x.id===id})[0]}
+function render(){
+  var q=document.getElementById('q').value.toLowerCase().trim(),h='',n=0;
+  P.forEach(function(x){
+    if(cat!=='all'&&x.c!==cat)return;
+    if(q&&(x.n+' '+x.it+' '+x.tag).toLowerCase().indexOf(q)<0)return;
+    n++;
+    h+='<div class="card"><div class="ph"><span class="tag">'+x.tag+'</span><img src="'+x.img+'" alt="'+x.n+'" onclick="openLb(this)"></div><div class="info"><div class="name">'+x.n+'</div><div class="items">'+x.it+'</div>';
+    if(x.p){h+='<div class="price">'+R(x.p)+'</div><button class="add dark" onclick="add(\''+x.id+'\')">Add to cart</button>'}
+    else{h+='<div class="price ask">Ask for price</div><a class="add wa" style="display:block;text-align:center" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent('Hi The Cozy Box, what is the price of '+x.n+'?')+'">Ask on WhatsApp</a>'}
+    h+='</div></div>';
+  });
+  document.getElementById('grid').innerHTML=h;
+  document.getElementById('none').style.display=n?'none':'block';
+}
+function add(id){cart[id]=(cart[id]||0)+1;save();upd();var b=document.getElementById('badge');b.style.transform='scale(1.4)';setTimeout(function(){b.style.transform=''},200)}
+function chg(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];save();upd();drawCart()}
+function clearCart(){cart={};save();upd();drawCart()}
+function totals(){var c=0,t=0;for(var id in cart){c+=cart[id];t+=cart[id]*find(id).p}return{c:c,t:t}}
+function upd(){var s=totals();document.getElementById('badge').textContent=s.c;document.getElementById('bn').textContent=s.c+(s.c===1?' item':' items');document.getElementById('bt').textContent=R(s.t);document.getElementById('bar').style.display=s.c?'flex':'none'}
+function drawCart(){
+  var h='';for(var id in cart){var x=find(id);h+='<div class="line"><img src="'+x.img+'" alt=""><div class="d">'+x.n+'<b>'+R(x.p*cart[id])+'</b></div><div class="qty"><button onclick="chg(\''+id+'\',-1)">&minus;</button><span>'+cart[id]+'</span><button onclick="chg(\''+id+'\',1)">+</button></div></div>'}
+  document.getElementById('lines').innerHTML=h||'<div class="empty">Your cart is empty</div>';
+  document.getElementById('tot').textContent=R(totals().t);
+}
+function openCart(){drawCart();document.getElementById('sheet').style.display='flex'}
+function closeCart(){document.getElementById('sheet').style.display='none'}
+function checkout(){
+  var s=totals();if(!s.c){closeCart();return}
+  var m='Hi The Cozy Box, I would like to order:\n';
+  for(var id in cart){var x=find(id);m+='- '+cart[id]+' x '+x.n+' ('+R(x.p)+')\n'}
+  m+='\nTotal: '+R(s.t)+'\nPlease confirm availability, delivery and payment. Thank you!';
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(m),'_blank');
+}
+function sendRequest(){
+  var n=document.getElementById('rname').value.trim(),t=document.getElementById('rtext').value.trim();
+  var m='Hi The Cozy Box, '+(n?'my name is '+n+'. ':'')+'I am looking for something that is not on your website:\n'+(t||'(please tell me what else you have)');
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(m),'_blank');
+}
+function openLb(el){document.getElementById('lbimg').src=el.src;document.getElementById('lb').style.display='flex'}
+document.getElementById('chips').addEventListener('click',function(e){
+  var b=e.target.closest('.chip');if(!b)return;
+  cat=b.getAttribute('data-c');
+  [].forEach.call(document.querySelectorAll('.chip'),function(c){c.classList.toggle('on',c===b)});
+  render();
+});
+render();upd();
+</script>
+</body>
+</html>
